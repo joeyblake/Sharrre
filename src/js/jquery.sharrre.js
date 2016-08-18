@@ -161,14 +161,15 @@
         url = buttonUrl.replace('{url}', replaceUrl);
         if (url != '') {  //urlCurl = '' if you don't want to used PHP script but used social button
             $.getJSON(url, function (json) {
+                console.log( json, 'asdfasdf' );
                 if (typeof json.count !== "undefined") {  //GooglePlus, Stumbleupon, Twitter, Pinterest and Digg
                     var temp = json.count + '';
                     temp = temp.replace('\u00c2\u00a0', '');  //remove google plus special chars
                     count += parseInt(temp, 10);
                 }
                 //get the FB total count (shares, likes and more)
-                else if (json.data && json.data.length > 0 && typeof json.data[0].total_count !== "undefined") { //Facebook total count
-                    count += parseInt(json.data[0].total_count, 10);
+                else if ( typeof json.share !== "undefined" ) { //Facebook total count
+                    count += parseInt(json.share.share_count, 10);
                 }
                 else if (typeof json[0] !== "undefined") {  //Delicious
                     count += parseInt(json[0].total_posts, 10);
