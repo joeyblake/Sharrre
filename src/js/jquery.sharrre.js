@@ -12,6 +12,7 @@
         defaults = {
             className: 'sharrre',
             share: {},
+            buttons: {},
             shareTotal: 0,
             template: '',
             title: '',

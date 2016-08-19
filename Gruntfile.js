@@ -12,8 +12,22 @@ module.exports = function (grunt) {
                 }
             }
         },
+        concat: {
+            dist: {
+                dest: 'dist/jquery.sharrre.src.js',
+                options: {
+                    sourceMap: true
+                },
+                src: [
+                    "src/js/platform/platform.js",
+                    "src/js/platform/*.js",
+                    "src/js/**/*.js"
+                ]
+            }
+        },
         uglify: {
             options: {
+                "sourceMap": true,
                 "separator": ";",
                 "preserveComments": function (node, comment) {
                     // preserve comments that start with a bang
@@ -52,6 +66,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     grunt.registerTask('default', ['watch']);
 
