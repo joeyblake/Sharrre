@@ -14,7 +14,7 @@ SharrrePlatform.register("twitterFollow", function (options) {
         showCount: 'false'
     };
 
-    defaultSettings = $.extend(true, {}, defaultSettings, options);
+    defaultSettings = extend(true, {}, defaultSettings, options);
     return {
         settings: defaultSettings,
         trackingAction: {site: 'twitter', action: 'follow'},

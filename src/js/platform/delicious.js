@@ -10,7 +10,7 @@ SharrrePlatform.register("delicious", function (options) {
         }
     };
 
-    defaultSettings = $.extend(true, {}, defaultSettings, options);
+    defaultSettings = extend(true, {}, defaultSettings, options);
 
     return {
         settings: defaultSettings,

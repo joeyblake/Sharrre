@@ -12,7 +12,7 @@ SharrrePlatform.register("googlePlus", function (options) {
         }
     };
 
-    defaultSettings = $.extend(true, {}, defaultSettings, options);
+    defaultSettings = extend(true, {}, defaultSettings, options);
     return {
         settings: defaultSettings,
         url: function (url) {

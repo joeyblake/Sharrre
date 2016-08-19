@@ -43,7 +43,7 @@
     /* Plugin constructor*/
     function Plugin(element, options) {
         this.element = element;
-        this.options = $.extend(true, {}, defaults, options);
+        this.options = extend(true, {}, defaults, options);
         this.options.share = options.share; //simple solution to allow order of buttons
         this._defaults = defaults;
         this._name = pluginName;

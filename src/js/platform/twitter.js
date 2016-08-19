@@ -13,7 +13,7 @@ SharrrePlatform.register("twitter", function (options) {
         }
     };
 
-    defaultSettings = $.extend(true, {}, defaultSettings, options);
+    defaultSettings = extend(true, {}, defaultSettings, options);
     return {
         settings: defaultSettings,
         trackingAction: {site: 'twitter', action: 'tweet'},

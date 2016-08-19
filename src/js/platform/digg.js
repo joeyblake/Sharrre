@@ -13,7 +13,7 @@ SharrrePlatform.register("digg", function (options) {
         }
     };
 
-    defaultSettings = $.extend(true, {}, defaultSettings, options);
+    defaultSettings = extend(true, {}, defaultSettings, options);
 
     return {
         settings: defaultSettings,

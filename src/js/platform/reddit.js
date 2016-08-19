@@ -10,7 +10,7 @@ SharrrePlatform.register("reddit", function (options) {
         }
     };
 
-    defaultSettings = $.extend(true, {}, defaultSettings, options);
+    defaultSettings = extend(true, {}, defaultSettings, options);
     return {
         settings: defaultSettings,
         trackingAction: {site: 'reddit', action: 'share'},
